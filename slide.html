@@ -1,266 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<!-- font -->
-<link href="https://fonts.googleapis.com/css?family=Open+Sans|Bitter" rel="stylesheet" type="text/css">
-<!-- Latest compiled and minified CSS --> 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> 
-<!-- Latest compiled and minified JavaScript --> 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<head>
+		<meta charset="UTF-8">
+		<title> arrow </title>
+		<link rel="stylesheet" href="slide_style.css">
+	</head>
+	
+	<body>
+		<header class="flex-header">
+        		Movie Poster
+    		</header>	
+    		<main class="flex-main">
+        		<nav class="flex-nav">
+				<p><img src="back.png" width="32" height="32"></p>
+       			</nav>
+        		<article class="flex-article">
+            			MAIN CONTENT
+       			</article>
+        		<aside class="flex-aside">
+				<p><img src="next.png" width="32" height="32"></p>
+       			</aside>
 
-<style>
-.carousel-showmanymoveone
-{
-  .carousel-control
-  { 
-    width: 4%;
-    background-image:none;
+    		</main>
+    		<footer class="flex-footer">
+        		Team A: Judy  David  Hodaessi  Tracy
+    		</footer>
+	</body>
 
-    &.left 
-    {
-      margin-left:15px;
-    }
-
-    &.right 
-    {
-      margin-right:15px;
-    }
-  }
-
-  .cloneditem-1, 
-  .cloneditem-2, 
-  .cloneditem-3
-  {
-    display: none;
-  }
-
-  .carousel-inner
-  {
-    @media all and (min-width: 768px)
-    {
-      @media (transform-3d), (-webkit-transform-3d)
-      {
-        > .item.active.right,
-        > .item.next
-        { 
-          transform: translate3d(50%, 0, 0);  
-          left: 0;
-        }
-
-        > .item.active.left,
-        > .item.prev
-        { 
-          transform: translate3d(-50%, 0, 0);
-          left: 0;
-        }
-
-        > .item.left,
-        > .item.prev.right,
-        > .item.active
-        {
-          transform: translate3d(0, 0, 0);
-          left: 0;
-        }    
-      } 
-
-      > .active.left,
-      > .prev
-      {
-        left: -50%;
-      }
-
-      > .active.right,
-      > .next
-      {
-        left:  50%;
-      }
-
-      > .left,
-      > .prev.right,
-      > .active
-      {
-        left: 0;
-      }
-
-      .cloneditem-1 
-      {
-        display: block;
-      }
-    }
-
-    @media all and (min-width: 992px)
-    {    
-      @media (transform-3d), (-webkit-transform-3d)
-      {
-        > .item.active.right,
-        > .item.next
-        { 
-          transform: translate3d(25%, 0, 0);  
-          left: 0;
-        }    
-
-        > .item.active.left,
-        > .item.prev
-        { 
-          transform: translate3d(-25%, 0, 0);
-          left: 0;
-        }
-
-        > .item.left,
-        > .item.prev.right,
-        > .item.active
-        {
-          transform: translate3d(0, 0, 0);
-          left: 0;
-        }
-      }
-
-      > .active.left,
-      > .prev
-      {
-        left: -25%;
-      }
-
-      > .active.right,
-      > .next
-      {
-        left:  25%;
-      }
-
-      > .left,
-      > .prev.right,
-      > .active
-      {
-        left: 0;
-      }
-
-      .cloneditem-2, 
-      .cloneditem-3
-      {
-        display: block;
-      }
-    }    
-  }
-}
-
-
-.container
-{
-  margin-bottom: 50px;
-}
-body
-{
-  font-family: 'Bitter', sans-serif;
-  color: #E54A41;
-  background-image: url('//static.rtpdesign.co.uk/blog/img/background.png');
-  background-repeat: no-repeat;
-  background-position: right top;
-  background-size: 20%;
-}
-p
-{
-  font-family: 'Open Sans', sans-serif;
-  color: #333;
-  margin-bottom: 2em;
-}
-h2
-{
-  margin: 2em 0 1em;
-}
-
-.logo
-{
-  margin: 20px auto;
-  height: 100px;  
-  
-  @media only screen and (min-width : 768px) {  
-    margin: 28px;
-    float: left;
-  }
-}
-
-.title
-{
-  padding: 28px;
-  display: table-cell;
-  position: relative;
-  vertical-align: middle;
-  text-align: center;
-}
-</style>
-
-</head>
-
-<body>
-<div class="container">
-  <div class="row header-row">
-    <div class="col-md-offset-2 col-md-8 title">
-      <h1>Movie Poster</h1>
-    </div>    
-  </div>
-  <div class="row">
-    <div class="col-md-12">
-      <div class="carousel carousel-showmanymoveone slide" id="carousel123">
-        <div class="carousel-inner">
-          <div class="item active">
-            <div class="col-xs-12 col-sm-6 col-md-3"><a href="#"><img src="http://placehold.it/500/0054A6/fff/&amp;text=1" class="img-responsive"></a></div>
-          </div>
-          <div class="item active">
-            <div class="col-xs-12 col-sm-6 col-md-3"><a href="#"><img src="http://placehold.it/500/002d5a/fff/&amp;text=2" class="img-responsive"></a></div>
-          </div>
-          <div class="item active">
-            <div class="col-xs-12 col-sm-6 col-md-3"><a href="#"><img src="http://placehold.it/500/d6d6d6/333&amp;text=3" class="img-responsive"></a></div>
-          </div>          
-          <div class="item active">
-            <div class="col-xs-12 col-sm-6 col-md-3"><a href="#"><img src="http://placehold.it/500/002040/eeeeee&amp;text=4" class="img-responsive"></a></div>
-          </div>
-          <div class="item">
-            <div class="col-xs-12 col-sm-6 col-md-3"><a href="#"><img src="http://placehold.it/500/0054A6/fff/&amp;text=5" class="img-responsive"></a></div>
-          </div>
-          <div class="item">
-            <div class="col-xs-12 col-sm-6 col-md-3"><a href="#"><img src="http://placehold.it/500/002d5a/fff/&amp;text=6" class="img-responsive"></a></div>
-          </div>
-          <div class="item">
-            <div class="col-xs-12 col-sm-6 col-md-3"><a href="#"><img src="http://placehold.it/500/eeeeee&amp;text=7" class="img-responsive"></a></div>
-          </div>
-          <div class="item">
-            <div class="col-xs-12 col-sm-6 col-md-3"><a href="#"><img src="http://placehold.it/500/40a1ff/002040&amp;text=8" class="img-responsive"></a></div>
-          </div>
-        </div>
-	<a class="left carousel-control" href="#carousel123" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
-        <a class="right carousel-control" href="#carousel123" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
-      </div>
-    </div>
-  </div>
-</div>
-	<script>
-(function(){
-  $('#carousel123').carousel({ interval: 2000 });
-  $('#carouselABC').carousel({ interval: 3600 });
-}());
-
-(function(){
-  $('.carousel-showmanymoveone .item').each(function(){
-    var itemToClone = $(this);
-
-    for (var i=1;i<4;i++) {
-      itemToClone = itemToClone.next();
-
-      // wrap around if at end of item collection
-      if (!itemToClone.length) {
-        itemToClone = $(this).siblings(':first');
-      }
-
-      // grab item, clone, add marker class, add to collection
-      itemToClone.children(':first-child').clone()
-        .addClass("cloneditem-"+(i))
-        .appendTo($(this));
-    }
-  });
-}());
-	</script>
-</body>
 </html>
