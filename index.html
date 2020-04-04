@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title> arrow </title>
-		<link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="main.css">
+        <script src="./datarequest.js"></script>
 		<script src="http://code.jquery.com/jquery-latest.js"></script>
 	</head>
 	<body>
@@ -25,7 +26,7 @@
                                 movie_title
                             </div>
                             <div class="poster_box">
-                                <img id="image" src="poster.jpg" class="poster"/>
+                                <img class="image" class="poster"/>
                             </div>
                             <div class="year">
                                 year
@@ -48,10 +49,30 @@
     		</footer>
 		<script>
 			$("#back").click(function(){
-				console.log("back")
+                objIndex--;
+                document.querySelector('.' + 'title').innerText
+                    = obj[objIndex].title;
+                document.querySelector('.' + 'year').innerText
+                    = obj[objIndex].release_date;
+                document.querySelector('.' + 'description').innerText
+                    = obj[objIndex].overview;
+                const url = "https://image.tmdb.org/t/p/w45/" + obj[objIndex].poster_path;
+
+                document.querySelector('.' + 'image').src =
+                    url;
 			});
 			$("#next").click(function(){
-				console.log("next")
+                objIndex++;
+                document.querySelector('.' + 'title').innerText
+                    = obj[objIndex].title;
+                document.querySelector('.' + 'year').innerText
+                    = obj[objIndex].release_date;
+                document.querySelector('.' + 'description').innerText
+                    = obj[objIndex].overview;
+                const url = "https://image.tmdb.org/t/p/w45/" + obj[objIndex].poster_path;
+
+                document.querySelector('.' + 'image').src =
+                    url;
 			});
 		</script>
 	</body>

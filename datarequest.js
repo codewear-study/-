@@ -2,7 +2,7 @@ const APIKEY = "e3f2eb568a44846e3e8c3bb859efc5e0";
 const url = "https://api.themoviedb.org/3/movie/now_playing?";
 
 var obj;
-
+var objIndex = 0;
 function getMovieList() {
     var url = makeURL();
     var xmlHttp = new XMLHttpRequest();
@@ -18,10 +18,8 @@ function getMovieList() {
                 = obj[0].release_date;
             document.querySelector('.' + 'description').innerText
                 = obj[0].overview;
-            const url = "https://image.tmdb.org/t/p/w500/" + obj[0].poster_path;
-
-            document.querySelector('.' + 'image').src =
-                url;
+            const url = "https://image.tmdb.org/t/p/w45/" + obj[0].poster_path;
+            document.querySelector('.' + 'image').src = url;
         }
     };
     xmlHttp.send();
