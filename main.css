@@ -15,7 +15,13 @@ h1{
     font-size: xx-large;
     margin-bottom: 10px;
 }
+.poster_box{
+    width: 100px;
+    height: 142px;
+    margin-bottom: 10px;
+}
 .poster{
+    max-width: 100%;
 }
 .year{
     font-size: medium;
