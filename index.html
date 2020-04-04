@@ -1,11 +1,61 @@
-<head>
-    <title>영화 포스터 보여주는 페이지</title>
-    <script src="index.js"></script>
-    <script src="datarequest.js"></script>
-</head>
-<body onload="getMovieList();">
-    <h1>
-        영화 포스터 페이지
-    </h1>
-
-</body>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> arrow </title>
+		<link rel="stylesheet" href="main.css">
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+	</head>
+	<body>
+		<header class="flex-header">
+        		Movie Poster
+            </header>
+            <div class="main_box">
+                <main class="flex-main">
+                    <nav class="flex-nav">
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                    <div id="back"><img src="back.png" width="32" height="32"></div>
+                </nav>
+                    <div class="movie">
+                        <div class="movie_box">
+                            <div class="title">
+                                movie_title
+                            </div>
+                            <div class="poster_box">
+                                <img id="image" src="poster.jpg" class="poster"/>
+                            </div>
+                            <div class="year">
+                                year
+                            </div class>
+                            <div class="description">
+                                description
+                            </div>
+                        </div>
+                    </div>
+                    <aside class="flex-aside">
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                    <div id="next"><img src="next.png" width="32" height="32"></div>
+                       </aside>
+                </main>
+            </div>	
+    		<footer class="flex-footer">
+    		</footer>
+		<script>
+			$("#back").click(function(){
+				console.log("back")
+			});
+			$("#next").click(function(){
+				console.log("next")
+			});
+		</script>
+	</body>
+</html>
+<script>
+    getMovieList();
+</script>

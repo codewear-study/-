@@ -1,0 +1,85 @@
+* {
+    margin: 2px; /*separate the sections of our web page.*/
+  }
+  body {
+    font-size: 24px;
+    color: black;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* want sections to flow from top to bottom*/
+  }
+  .flex-header {
+    background-color: #ffffff;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .flex-main {
+    display: flex;
+    flex: 1; /*takes up the vertical space*/
+  }
+  .flex-nav {
+    background-color: rgb(255, 255, 255);
+    padding-top: 3rem;
+    flex: 1 1 5rem; /*takes up the horizontal space*/
+  }
+  .movie {
+    background-color: white;
+    padding-top: 3rem;
+    flex: 3 3;
+  }
+  .flex-aside {
+    background-color: rgb(255, 255, 255);
+    padding-top: 3rem;
+    flex: 1 1 5rem; /*takes up the horizontal space*/
+  }
+  .flex-footer {
+    background-color: rgb(255, 255, 255);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  @media all and (max-width: 540px) {
+    .flex-main {
+      flex-direction: column;
+    }
+  }
+
+  .movie_box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    height: 300px;
+    padding: 20px;
+    border: 1px solid black;
+    margin: 10 10 10 10;
+}
+.title{
+    font-size: xx-large;
+    margin-bottom: 10px;
+}
+.poster_box{
+    width: 100px;
+    height: 142px;
+    margin-bottom: 10px;
+}
+.poster{
+    max-width: 100%;
+}
+.year{
+    font-size: medium;
+    margin-bottom: 10px;
+}
+.director{
+    font-size: medium;
+    margin-bottom: 10px;
+}
+.description{
+    font-size: medium;
+    margin-bottom: 10px;
+}
+.main_box{
+    display: flex;
+    flex-direction: row;
+}
