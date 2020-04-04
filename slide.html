@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<title> arrow </title>
 		<link rel="stylesheet" href="slide_style.css">
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
 	</head>
 	
 	<body>
@@ -12,19 +13,25 @@
     		</header>	
     		<main class="flex-main">
         		<nav class="flex-nav">
-				<p><img src="back.png" width="32" height="32"></p>
-       			</nav>
+				<div id="back"><img src="back.png" width="32" height="32"></div>
+			</nav>
         		<article class="flex-article">
             			MAIN CONTENT
        			</article>
         		<aside class="flex-aside">
-				<p><img src="next.png" width="32" height="32"></p>
+				<div id="next"><img src="next.png" width="32" height="32"></div>
        			</aside>
 
     		</main>
     		<footer class="flex-footer">
-        		Team A: Judy  David  Hodaessi  Tracy
     		</footer>
+		<script>
+			$("#back").click(function(){
+				console.log("back")
+			});
+			$("#next").click(function(){
+				console.log("next")
+			});
+		</script>
 	</body>
-
 </html>
