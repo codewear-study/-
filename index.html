@@ -50,6 +50,8 @@
 		<script>
 			$("#back").click(function(){
                 objIndex--;
+                if(objIndex < 0)
+                    objIndex = 10;
                 document.querySelector('.' + 'title').innerText
                     = obj[objIndex].title;
                 document.querySelector('.' + 'year').innerText
@@ -63,6 +65,8 @@
 			});
 			$("#next").click(function(){
                 objIndex++;
+                if (objIndex > 10)
+                    objIndex = 0;
                 document.querySelector('.' + 'title').innerText
                     = obj[objIndex].title;
                 document.querySelector('.' + 'year').innerText
